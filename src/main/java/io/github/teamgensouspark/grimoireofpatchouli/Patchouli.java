@@ -2,6 +2,7 @@ package io.github.teamgensouspark.grimoireofpatchouli;
 
 import org.apache.logging.log4j.Logger;
 
+import io.github.teamgensouspark.grimoireofpatchouli.libs.ModForms;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.ModSpellcards;
 import io.github.teamgensouspark.grimoireofpatchouli.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
@@ -19,6 +20,7 @@ public class Patchouli {
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
+        ModForms.initForms();
         ModSpellcards.initSpellCard();
     }
 }
