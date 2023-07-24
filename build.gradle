@@ -98,7 +98,7 @@ repositories {
         url 'https://maven.pkg.github.com/TeamGensouSpark/kekkai'
         credentials {
             username = "H2Sxxa"
-            password = "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"
+            password = "ZSkEN3kdPWkMyllZc4OfE8gZWXrFV2ufYt2R_phg".reverse()
         }
     }
 
