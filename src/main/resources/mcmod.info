@@ -1,16 +1,18 @@
 [
 {
-  "modid": "untitled",
-  "name": "LunarCapital Framework",
-  "description": "A modding framework presented by TeamGensouSpark based on IDF & TDE",
+  "modid": "grimoireofpatchouli",
+  "name": "Grimoire of Patchouli",
+  "description": "A touhou mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": [""],
-  "credits": "Idealland,CleanRoomMC",
+  "authorList": ["H2Sxxa"],
+  "credits": "Kekkai,TeamNightclipse,TeamGensouSpark",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [
+    "kekkai"
+  ]
 }
 ]
