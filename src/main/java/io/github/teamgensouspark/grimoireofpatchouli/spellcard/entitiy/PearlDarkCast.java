@@ -1,5 +1,6 @@
 package io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy;
 
+import io.github.teamgensouspark.kekkai.example.MySpellCardEntity;
 import io.github.teamgensouspark.utils.ReflectUtils;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
@@ -16,7 +17,6 @@ public class PearlDarkCast extends SpellcardEntity {
     @Override
     public void onSpellcardUpdate() {
         int cardtimeis = time();
-
         if (cardtimeis == 10 || cardtimeis == 30 || cardtimeis == 60) {
             if (!world().isRemote) {
                 world().spawnEntity(ReflectUtils.getCustomOrb(user(),4f));

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.teamgensouspark.grimoireofpatchouli.Consts;
+import io.github.teamgensouspark.grimoireofpatchouli.danmaku.form.GoPFormDanModelBase;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.form.Form;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
