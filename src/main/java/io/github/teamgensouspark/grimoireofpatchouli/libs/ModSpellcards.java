@@ -3,8 +3,11 @@ package io.github.teamgensouspark.grimoireofpatchouli.libs;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.omg.CORBA.portable.IDLEntity;
+
 import io.github.teamgensouspark.grimoireofpatchouli.Consts;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.GoPSpellcardBase;
+import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.IDRelalese;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.PearlDarkCast;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
@@ -22,6 +25,11 @@ public class ModSpellcards {
     public static final Spellcard PEARL_DARK_CAST = new GoPSpellcardBase<>("pearl_dark_cast",
             PearlDarkCast.class,
             TouhouCharacter.REIMU_HAKUREI).setendTime(80);
+
+    public static final Spellcard ID_RELEASE = new GoPSpellcardBase<>("id_release",
+            IDRelalese.class,
+            TouhouCharacter.KOISHI_KOMEIJI).setendTime(80);
+
 
     @SubscribeEvent
     public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
