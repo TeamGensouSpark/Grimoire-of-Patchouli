@@ -1,6 +1,6 @@
 package io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy;
 
-import io.github.teamgensouspark.utils.ReflectUtils;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.ReflectUtils;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;

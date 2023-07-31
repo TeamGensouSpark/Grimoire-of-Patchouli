@@ -3,8 +3,6 @@ package io.github.teamgensouspark.grimoireofpatchouli.libs;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.omg.CORBA.portable.IDLEntity;
-
 import io.github.teamgensouspark.grimoireofpatchouli.Consts;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.GoPSpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.IDRelalese;
