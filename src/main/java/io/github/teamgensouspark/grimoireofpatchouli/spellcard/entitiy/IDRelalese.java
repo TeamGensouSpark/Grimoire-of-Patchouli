@@ -12,6 +12,7 @@ import net.katsstuff.teamnightclipse.mirror.data.Quat;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 import net.katsstuff.teamnightclipse.danmakucore.javastuff.DanmakuCreationHelper;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.util.EnumFacing.Axis;
 import scala.Option;
 
 public class IDRelalese extends SpellcardEntity {
@@ -24,10 +25,10 @@ public class IDRelalese extends SpellcardEntity {
     public void onSpellcardUpdate() {
         if (time() % 5 == 0) {
             DanmakuCreationHelper.createCircleShot(
-                    Quat.fromAxisAngle(Vector3.Forward(), 0F),
+                    Quat.fromAxisAngle(Axis.Z, 0d),
                     DanmakuBuilder.getBuilderWithEntity(user())
                             .setShot(LibShotData.SHOT_HEART.setSubEntity(ModSubEntity.IDRELEASE_SUBENTITYTYPE)).build(),
-                    8,
+                    11,
                     0,
                     1d);
         }

@@ -26,7 +26,7 @@ public class ModSpellcards {
 
     public static final Spellcard ID_RELEASE = new GoPSpellcardBase<>("id_release",
             IDRelalese.class,
-            TouhouCharacter.KOISHI_KOMEIJI).setendTime(80);
+            TouhouCharacter.KOISHI_KOMEIJI).setendTime(180);
 
 
     @SubscribeEvent
