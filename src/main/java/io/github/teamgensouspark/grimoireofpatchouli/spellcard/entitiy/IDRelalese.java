@@ -1,15 +1,12 @@
 package io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy;
 
-import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.DanmakuIDReleaseSubEntity;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.ModSubEntity;
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;
-import io.github.teamgensouspark.kekkai.example.MySpellCardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.lib.data.LibShotData;
 import net.katsstuff.teamnightclipse.mirror.data.Quat;
-import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 import net.katsstuff.teamnightclipse.danmakucore.javastuff.DanmakuCreationHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumFacing.Axis;
@@ -27,9 +24,11 @@ public class IDRelalese extends SpellcardEntity {
             DanmakuCreationHelper.createCircleShot(
                     Quat.fromAxisAngle(Axis.Z, 0d),
                     DanmakuBuilder.getBuilderWithEntity(user())
-                            .setShot(LibShotData.SHOT_HEART.setSubEntity(ModSubEntity.IDRELEASE_SUBENTITYTYPE)).build(),
+                            .setShot(LibShotData.SHOT_HEART
+                                    .setSubEntity(ModSubEntity.IDRELEASE_SUBENTITYTYPE))
+                            .build(),
                     11,
-                    0,
+                    0f,
                     1d);
         }
 

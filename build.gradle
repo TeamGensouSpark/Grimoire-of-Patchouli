@@ -194,7 +194,11 @@ processResources {
     }
 }
 
+
+
+
 jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
         def attribute_map = [:]
         if (project.use_coremod.toBoolean()) {
