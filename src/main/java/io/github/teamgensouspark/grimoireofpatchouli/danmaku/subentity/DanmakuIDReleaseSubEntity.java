@@ -11,9 +11,8 @@ public class DanmakuIDReleaseSubEntity extends SubEntityDefault {
     public DanmakuUpdate subEntityTick(DanmakuState danmakuState) {
         Vector3 newDirection = danmakuState.direction();
         if (danmakuState.ticksExisted() < 20) {
-            newDirection=new Vector3(newDirection.toVec3d().rotateYaw(0.05f));
+            newDirection = new Vector3(newDirection.toVec3d().rotateYaw(0.05f));
         }
-
         return super.subEntityTick(
                 danmakuState.copy(danmakuState.entity().setDirection(newDirection), danmakuState.extra(),
                         danmakuState.tracking()));
