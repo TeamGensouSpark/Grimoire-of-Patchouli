@@ -33,7 +33,7 @@ public class ModSpellcards {
                         TouhouCharacter.KOISHI_KOMEIJI).setendTime(180);
 
         public static final Spellcard DREAM_SEAL = new GoPSpellcardBase<>("dream_seal", DreamSeal.class,
-                        TouhouCharacter.REIMU_HAKUREI);
+                        TouhouCharacter.REIMU_HAKUREI).setendTime(60);
 
         @SubscribeEvent
         public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
