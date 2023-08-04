@@ -5,7 +5,7 @@ import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuUpdate;
 import net.katsstuff.teamnightclipse.danmakucore.impl.subentity.SubEntityDefault;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 
-public class DanmakuIDReleaseSubEntity extends SubEntityDefault {
+public class IDReleaseSubEntity extends SubEntityDefault {
 
     @Override
     public DanmakuUpdate subEntityTick(DanmakuState danmakuState) {
