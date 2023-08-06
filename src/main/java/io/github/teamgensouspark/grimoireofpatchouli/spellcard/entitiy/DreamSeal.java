@@ -3,7 +3,7 @@ package io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy;
 import java.util.List;
 import java.util.Random;
 
-import io.github.teamgensouspark.grimoireofpatchouli.libs.ModSubEntity;
+import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModSubEntity;
 import io.github.teamgensouspark.kekkai.color.AtomColors;
 import io.github.teamgensouspark.kekkai.color.DanCoreColors;
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;

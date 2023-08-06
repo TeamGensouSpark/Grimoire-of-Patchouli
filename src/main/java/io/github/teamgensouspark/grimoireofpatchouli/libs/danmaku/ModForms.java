@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.grimoireofpatchouli.libs;
+package io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku;
 
 import java.util.ArrayList;
 import java.util.List;

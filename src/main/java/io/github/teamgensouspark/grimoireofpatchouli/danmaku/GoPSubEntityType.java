@@ -1,6 +1,6 @@
 package io.github.teamgensouspark.grimoireofpatchouli.danmaku;
 
-import io.github.teamgensouspark.grimoireofpatchouli.libs.ModSubEntity;
+import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModSubEntity;
 import io.github.teamgensouspark.kekkai.danmaku.subentity.SubEntityBase;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.subentity.SubEntity;
 

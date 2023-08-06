@@ -1,6 +1,6 @@
 package io.github.teamgensouspark.grimoireofpatchouli.danmaku.form;
 
-import io.github.teamgensouspark.grimoireofpatchouli.libs.ModForms;
+import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModForms;
 import net.katsstuff.teamnightclipse.danmakucore.danmodel.FormDanModel;
 import net.minecraft.util.ResourceLocation;
 
