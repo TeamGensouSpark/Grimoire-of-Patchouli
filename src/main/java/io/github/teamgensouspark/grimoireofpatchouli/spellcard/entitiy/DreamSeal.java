@@ -13,12 +13,14 @@ import java.util.Collections;
 import java.util.Iterator;
 
 import net.katsstuff.teamnightclipse.danmakucore.DanmakuCore;
+import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.lib.data.LibShotData;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.nbt.NBTTagCompound;
 import scala.Option;
 
 public class DreamSeal extends SpellcardEntity {
@@ -48,11 +50,14 @@ public class DreamSeal extends SpellcardEntity {
 
 		if (time() % 4 == 0) {
 			if (colors.hasNext()) {
+				ShotData shotData = LibShotData.SHOT_MEDIUM.setMainColor(colors.next()).setDelay(random.nextInt(4))
+						.setSize(random.nextFloat() + 1.3f).setDamage(8)
+						.setSubEntity(ModSubEntity.DREAM_SEAL);
+				NBTTagCompound nbt = user().getEntityData();
+				nbt.setInteger("target_id", target().get().getEntityId());
 				DanmakuCore.spawnDanmaku(Collections.singletonList(
 						DanmakuBuilder.getBuilderWithEntity(user())
-								.setShot(LibShotData.SHOT_MEDIUM.setMainColor(colors.next()).setDelay(random.nextInt(4))
-										.setSize(random.nextFloat() + 1.3f).setDamage(8)
-										.setSubEntity(ModSubEntity.DREAM_SEAL))
+								.setShot(shotData)
 								.setMovementData(1.2d)
 								.setPos(new Vector3(user().getPositionVector()).offset(Vector3.randomDirection(),
 										random.nextDouble() + 1.2d))

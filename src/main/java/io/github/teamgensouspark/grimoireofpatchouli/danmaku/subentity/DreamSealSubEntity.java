@@ -5,6 +5,8 @@ import java.util.Random;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuState;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuUpdate;
 import net.katsstuff.teamnightclipse.danmakucore.impl.subentity.SubEntityDefault;
+import net.katsstuff.teamnightclipse.mirror.data.Vector3;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
@@ -19,7 +21,15 @@ public class DreamSealSubEntity extends SubEntityDefault {
             danmaku.world().spawnParticle(EnumParticleTypes.REDSTONE, danmaku.pos().x(), danmaku.pos().y(),
                     danmaku.pos().z(), 0d, 0d, 0d);
         }
-        return super.subEntityTick(danmaku);
+        Vector3 newDirection = danmaku.direction();
+        try {
+            Entity entity = danmaku.world().getEntityByID(danmaku.user().get().getEntityData().getInteger("target_id"));
+            newDirection = (Vector3) Vector3.directionToPos(danmaku.pos(), Vector3.fromEntityCenter(entity));
+        } catch (Exception e) {
+            System.out.println(e.toString());
+        }
+        return super.subEntityTick(
+                danmaku.copy(danmaku.entity().setDirection(newDirection), danmaku.extra(), danmaku.tracking()));
     }
 
     @Override
