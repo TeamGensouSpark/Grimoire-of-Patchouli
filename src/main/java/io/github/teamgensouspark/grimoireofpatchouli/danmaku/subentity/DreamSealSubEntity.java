@@ -24,7 +24,11 @@ public class DreamSealSubEntity extends SubEntityDefault {
         Vector3 newDirection = danmaku.direction();
         try {
             Entity entity = danmaku.world().getEntityByID(danmaku.user().get().getEntityData().getInteger("target_id"));
-            newDirection = (Vector3) Vector3.directionToPos(danmaku.pos(), Vector3.fromEntityCenter(entity));
+            if (entity != null) {
+                if (entity.getDistance(danmaku.pos().x(), danmaku.pos().y(), danmaku.pos().z()) > 4) {
+                    newDirection = (Vector3) Vector3.directionToPos(danmaku.pos(), new Vector3(entity));
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.toString());
         }
@@ -45,6 +49,8 @@ public class DreamSealSubEntity extends SubEntityDefault {
         return super.impactEntity(danmaku, raytrace).addCallback(
                 () -> {
                     try {
+                        danmaku.world().createExplosion(null, danmaku.pos().x(), danmaku.pos().y(), danmaku.pos().z(),
+                                1, false);
                         EntityLivingBase livingBase = (EntityLivingBase) raytrace.entityHit;
                         livingBase.addPotionEffect(new PotionEffect(MobEffects.BLINDNESS, 160));
                         livingBase.addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 160, 2));
