@@ -1,9 +1,12 @@
-item.spellcard.spellcard.grimoireofpatchouli.pearl_dark_cast.name=「明珠暗投」
+item.spellcard.spellcard.grimoireofpatchouli.pearl_dark_cast.name=符卡:「明珠暗投」
 spellcard.grimoireofpatchouli.pearl_dark_cast=「明珠暗投」
 
-item.spellcard.spellcard.grimoireofpatchouli.id_release.name=本能「本我的解放」
+item.spellcard.spellcard.grimoireofpatchouli.id_release.name=符卡:本能「本我的解放」
 spellcard.grimoireofpatchouli.id_release=本能「本我的解放」
 
 
-item.spellcard.spellcard.grimoireofpatchouli.dream_seal.name=灵符「梦想封印」
+item.spellcard.spellcard.grimoireofpatchouli.dream_seal.name=符卡:灵符「梦想封印」
 spellcard.grimoireofpatchouli.dream_seal=灵符「梦想封印」
+
+item.spellcard.spellcard.grimoireofpatchouli.milky_way.name=符卡:魔符「Milky Way」
+spellcard.grimoireofpatchouli.milky_way=魔符「Milky Way」
