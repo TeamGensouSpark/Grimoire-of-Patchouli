@@ -15,4 +15,8 @@ spellcard.grimoireofpatchouli.milky_way=魔符「Milky Way」
 item.spellcard.spellcard.grimoireofpatchouli.master_spark.name=符卡:恋符「Master Spark」
 spellcard.grimoireofpatchouli.master_spark=恋符「Master Spark」
 
-item.card_bag.name=符卡袋
+item.card_bag.name=Spellcard Package
+
+gop.tooltip.showmore=[ HOLD LSHIFT SHOW MORE ]
+
+item.card_bag.tooltip=Pick up one Spellcard from All Spellcards

@@ -16,3 +16,7 @@ item.spellcard.spellcard.grimoireofpatchouli.master_spark.name=符卡:恋符「M
 spellcard.grimoireofpatchouli.master_spark=恋符「Master Spark」
 
 item.card_bag.name=符卡袋
+
+gop.tooltip.showmore=[ 按住 LSHIFT 展示更多 ]
+
+item.card_bag.tooltip=从所有符卡中抽取一张符卡
