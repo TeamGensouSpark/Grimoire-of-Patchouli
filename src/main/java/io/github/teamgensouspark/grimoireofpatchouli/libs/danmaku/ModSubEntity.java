@@ -7,6 +7,8 @@ import io.github.teamgensouspark.grimoireofpatchouli.Consts;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.GoPSubEntityType;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.DreamSealSubEntity;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.IDReleaseSubEntity;
+import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.MasterSparkSubEntity;
+import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.MasterSpark;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.subentity.SubEntityType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -21,8 +23,10 @@ public class ModSubEntity {
 
     public static final SubEntityType IDRELEASE_SUBENTITYTYPE = new GoPSubEntityType<>(
             "idrelease_subentity", IDReleaseSubEntity.class);
-    public static final SubEntityType DREAM_SEAL = new GoPSubEntityType<>(
+    public static final SubEntityType DREAM_SEAL_SUBENTITYTYPE = new GoPSubEntityType<>(
             "dreamseal_subentity", DreamSealSubEntity.class);
+    public static final SubEntityType MASTER_SPARK_SUBENTITYTYPE = new GoPSubEntityType<>(
+            "master_spark_subentity", MasterSparkSubEntity.class);
 
     @SubscribeEvent
     public static void onSubEntityRegister(RegistryEvent.Register<SubEntityType> event) {

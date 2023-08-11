@@ -52,7 +52,7 @@ public class DreamSeal extends SpellcardEntity {
 			if (colors.hasNext()) {
 				ShotData shotData = LibShotData.SHOT_MEDIUM.setMainColor(colors.next()).setDelay(random.nextInt(4))
 						.setSize(random.nextFloat() + 1.3f).setDamage(8)
-						.setSubEntity(ModSubEntity.DREAM_SEAL);
+						.setSubEntity(ModSubEntity.DREAM_SEAL_SUBENTITYTYPE);
 				NBTTagCompound nbt = user().getEntityData();
 				nbt.setInteger("target_id", target().get().getEntityId());
 				DanmakuCore.spawnDanmaku(Collections.singletonList(
@@ -62,7 +62,6 @@ public class DreamSeal extends SpellcardEntity {
 								.setPos(new Vector3(user().getPositionVector()).offset(Vector3.randomDirection(),
 										random.nextDouble() + 1.2d))
 								.setDirection(Vector3.directionToEntity(user(), target().get()))
-								.setSource(target().get())
 								.build()
 								.asEntity()));
 			}

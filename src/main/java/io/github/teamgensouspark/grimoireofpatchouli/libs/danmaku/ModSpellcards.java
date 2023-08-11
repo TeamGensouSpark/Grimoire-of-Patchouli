@@ -8,6 +8,7 @@ import io.github.teamgensouspark.grimoireofpatchouli.spellcard.GoPSpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.compat.GoASpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.DreamSeal;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.IDRelease;
+import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.MasterSpark;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.MilkyWay;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.PearlDarkCast;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
@@ -38,6 +39,9 @@ public class ModSpellcards {
 
         public static final Spellcard MILKY_WAY = new GoPSpellcardBase<>("milky_way", MilkyWay.class,
                         TouhouCharacter.MARISA_KIRISAME).setendTime(180);
+
+        public static final Spellcard MASTER_SPARK = new GoPSpellcardBase<>("master_spark", MasterSpark.class,
+                        TouhouCharacter.MARISA_KIRISAME).setendTime(200);
 
         @SubscribeEvent
         public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
