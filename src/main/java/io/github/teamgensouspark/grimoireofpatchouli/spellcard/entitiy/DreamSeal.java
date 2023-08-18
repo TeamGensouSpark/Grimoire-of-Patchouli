@@ -7,6 +7,7 @@ import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModSubEntity;
 import io.github.teamgensouspark.kekkai.color.AtomColors;
 import io.github.teamgensouspark.kekkai.color.DanCoreColors;
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;
+import io.github.teamgensouspark.kekkai.utils.KekkaiHelper;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -50,18 +51,15 @@ public class DreamSeal extends SpellcardEntity {
 
 		if (time() % 4 == 0) {
 			if (colors.hasNext()) {
-				ShotData shotData = LibShotData.SHOT_MEDIUM.setMainColor(colors.next()).setDelay(random.nextInt(4))
-						.setSize(random.nextFloat() + 1.3f).setDamage(8)
-						.setSubEntity(ModSubEntity.DREAM_SEAL_SUBENTITYTYPE);
-				NBTTagCompound nbt = user().getEntityData();
-				nbt.setInteger("target_id", target().get().getEntityId());
 				DanmakuCore.spawnDanmaku(Collections.singletonList(
-						DanmakuBuilder.getBuilderWithEntity(user())
-								.setShot(shotData)
+						KekkaiHelper.applyTargetWithSpellcard(DanmakuBuilder.getBuilderWithEntity(user())
+								.setShot(LibShotData.SHOT_MEDIUM.setMainColor(colors.next()).setDelay(random.nextInt(4))
+										.setSize(random.nextFloat() + 1.3f).setDamage(8)
+										.setSubEntity(ModSubEntity.DREAM_SEAL_SUBENTITYTYPE))
 								.setMovementData(1.2d)
 								.setPos(new Vector3(user().getPositionVector()).offset(Vector3.randomDirection(),
 										random.nextDouble() + 1.2d))
-								.setDirection(Vector3.directionToEntity(user(), target().get()))
+								.setDirection(Vector3.directionToEntity(user(), target().get())), this)
 								.build()
 								.asEntity()));
 			}

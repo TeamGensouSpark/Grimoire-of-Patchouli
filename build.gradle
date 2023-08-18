@@ -160,7 +160,7 @@ dependencies {
         }
     }
 
-    implementation 'io.github.teamgensouspark:kekkai:1.0'
+    implementation 'io.github.teamgensouspark:kekkai:1.1.0'
 
     implementation fileTree(dir:project.implementation_folder.toString(),includes:['*jar'])
     if (project.do_embed.toBoolean() && project.gradle.startParameter.taskNames[0] == "build"){

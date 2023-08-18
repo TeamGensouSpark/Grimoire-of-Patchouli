@@ -3,7 +3,7 @@ package io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.teamgensouspark.grimoireofpatchouli.Consts;
+import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.GoPSubEntityType;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.DreamSealSubEntity;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.IDReleaseSubEntity;
@@ -14,7 +14,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@EventBusSubscriber(modid = Consts.MODID)
+@EventBusSubscriber(modid = PatchouliModInfo.MODID)
 public class ModSubEntity {
     public static void initSubEntity() {
     };

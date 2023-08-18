@@ -2,6 +2,7 @@ package io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity;
 
 import java.util.Random;
 
+import io.github.teamgensouspark.kekkai.utils.KekkaiHelper;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuState;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.DanmakuUpdate;
 import net.katsstuff.teamnightclipse.danmakucore.impl.subentity.SubEntityDefault;
@@ -23,7 +24,7 @@ public class DreamSealSubEntity extends SubEntityDefault {
         }
         Vector3 newDirection = danmaku.direction();
         try {
-            Entity entity = danmaku.world().getEntityByID(danmaku.user().get().getEntityData().getInteger("target_id"));
+            Entity entity = KekkaiHelper.getTargetWithDanmakuState(danmaku);
             if (entity != null) {
                 if (entity.getDistance(danmaku.pos().x(), danmaku.pos().y(), danmaku.pos().z()) > 4) {
                     newDirection = (Vector3) Vector3.directionToPos(danmaku.pos(), new Vector3(entity));

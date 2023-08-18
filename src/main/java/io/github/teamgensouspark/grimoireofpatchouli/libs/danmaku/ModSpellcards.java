@@ -3,7 +3,7 @@ package io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.teamgensouspark.grimoireofpatchouli.Consts;
+import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.GoPSpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.compat.GoASpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.DreamSeal;
@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@EventBusSubscriber(modid = Consts.MODID)
+@EventBusSubscriber(modid = PatchouliModInfo.MODID)
 public class ModSpellcards {
         public static void initSpellCard() {
         };

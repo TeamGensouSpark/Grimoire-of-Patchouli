@@ -3,13 +3,13 @@ package io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.teamgensouspark.grimoireofpatchouli.Consts;
+import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.form.Form;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@EventBusSubscriber(modid = Consts.MODID)
+@EventBusSubscriber(modid = PatchouliModInfo.MODID)
 public class ModForms {
     public static void initForms() {
     };

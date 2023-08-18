@@ -3,7 +3,7 @@ package io.github.teamgensouspark.grimoireofpatchouli.libs.vanilia;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.teamgensouspark.grimoireofpatchouli.Consts;
+import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.Patchouli;
 import io.github.teamgensouspark.grimoireofpatchouli.item.Cardbag;
 import net.minecraft.item.Item;
@@ -12,7 +12,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@EventBusSubscriber(modid = Consts.MODID)
+@EventBusSubscriber(modid = PatchouliModInfo.MODID)
 public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<>();
 

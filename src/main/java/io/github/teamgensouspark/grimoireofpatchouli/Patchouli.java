@@ -12,10 +12,10 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Consts.MODID, name = Consts.NAME, version = Consts.VERSION, dependencies = "required-after:mirror@[0.4.0,);required-after:danmakucore;required-after:kekkai")
+@Mod(modid = PatchouliModInfo.MODID, name = PatchouliModInfo.NAME, version = PatchouliModInfo.VERSION, dependencies = "required-after:mirror@[0.4.0,);required-after:danmakucore;required-after:kekkai")
 public class Patchouli {
     public static Logger logger;
-    public static ModResource patchouli_res = new ModResource(Consts.MODID);
+    public static ModResource patchouli_res = new ModResource(PatchouliModInfo.MODID);
     @SidedProxy(clientSide = "io.github.teamgensouspark.grimoireofpatchouli.proxy.ClientProxy", serverSide = "io.github.teamgensouspark.grimoireofpatchouli.proxy.CommonProxy")
     public static CommonProxy proxy;
 
