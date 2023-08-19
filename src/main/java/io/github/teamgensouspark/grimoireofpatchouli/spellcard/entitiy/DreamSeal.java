@@ -14,14 +14,12 @@ import java.util.Collections;
 import java.util.Iterator;
 
 import net.katsstuff.teamnightclipse.danmakucore.DanmakuCore;
-import net.katsstuff.teamnightclipse.danmakucore.data.ShotData;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.SpellcardEntity;
 import net.katsstuff.teamnightclipse.danmakucore.lib.data.LibShotData;
 import net.katsstuff.teamnightclipse.mirror.data.Vector3;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.nbt.NBTTagCompound;
 import scala.Option;
 
 public class DreamSeal extends SpellcardEntity {
@@ -41,15 +39,7 @@ public class DreamSeal extends SpellcardEntity {
 
 	@Override
 	public void onSpellcardUpdate() {
-		if (time() == 1) {
-			user().setNoGravity(true);
-		}
-
-		if (time() == 59) {
-			user().setNoGravity(false);
-		}
-
-		if (time() % 4 == 0) {
+		if (time() > 4 && time() % 4 == 0) {
 			if (colors.hasNext()) {
 				DanmakuCore.spawnDanmaku(Collections.singletonList(
 						KekkaiHelper.applyTargetWithSpellcard(DanmakuBuilder.getBuilderWithEntity(user())
@@ -57,8 +47,8 @@ public class DreamSeal extends SpellcardEntity {
 										.setSize(random.nextFloat() + 1.3f).setDamage(8)
 										.setSubEntity(ModSubEntity.DREAM_SEAL_SUBENTITYTYPE))
 								.setMovementData(1.2d)
-								.setPos(new Vector3(user().getPositionVector()).offset(Vector3.randomDirection(),
-										random.nextDouble() + 1.2d))
+								.setPos((new Vector3(user().getPositionVector()).offset(Vector3.randomDirection(),
+										random.nextDouble() + 1.2d)).add(new Vector3(0, 2, 0)))
 								.setDirection(Vector3.directionToEntity(user(), target().get())), this)
 								.build()
 								.asEntity()));
