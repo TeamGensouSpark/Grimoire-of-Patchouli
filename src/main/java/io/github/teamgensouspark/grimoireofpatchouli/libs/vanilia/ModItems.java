@@ -6,6 +6,8 @@ import java.util.List;
 import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.Patchouli;
 import io.github.teamgensouspark.grimoireofpatchouli.item.Cardbag;
+import io.github.teamgensouspark.grimoireofpatchouli.item.touhou.ShiningTripod;
+import io.github.teamgensouspark.grimoireofpatchouli.item.touhou.ShionsBowel;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -17,6 +19,8 @@ public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<>();
 
     public static final Item CARD_BAG = new Cardbag("card_bag");
+    public static final Item SHIONS_BOWL = new ShionsBowel("shions_bowl");
+    public static final Item SHINING_TRIPOD = new ShiningTripod("shining_tripod");
 
     @SubscribeEvent
     public static void onItemModelReg(ModelRegistryEvent event) {
