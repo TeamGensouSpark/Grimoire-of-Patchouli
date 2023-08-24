@@ -94,14 +94,12 @@ repositories {
     }
 
     maven {
-        name 'TGS-Kekkai Github Package'
-        url 'https://maven.pkg.github.com/TeamGensouSpark/kekkai'
-        credentials {
-            username = "H2Sxxa"
-            password = "ZSkEN3kdPWkMyllZc4OfE8gZWXrFV2ufYt2R_phg".reverse()
+        name 'Modrinth'
+        url "https://api.modrinth.com/maven"
+        content {
+            includeGroup 'maven.modrinth'
         }
     }
-
 
     if (project.use_mirror.toBoolean()) {
         removeIf {
@@ -160,7 +158,7 @@ dependencies {
         }
     }
 
-    implementation 'io.github.teamgensouspark:kekkai:1.1.0'
+    implementation 'maven.modrinth:kekkai:1.2.0'
 
     implementation fileTree(dir:project.implementation_folder.toString(),includes:['*jar'])
     if (project.do_embed.toBoolean() && project.gradle.startParameter.taskNames[0] == "build"){
