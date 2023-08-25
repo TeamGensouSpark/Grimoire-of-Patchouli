@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import io.github.teamgensouspark.grimoireofpatchouli.intf.IHasTouhouCharacter;
+import io.github.teamgensouspark.grimoireofpatchouli.libs.vanilia.ModItems;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
@@ -12,13 +13,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class TouhouItem extends ItemBase implements IHasTouhouCharacter {
+public class TouhouSword extends ItemSwordBase implements IHasTouhouCharacter {
     TouhouCharacter character;
 
-    public TouhouItem(String name, TouhouCharacter character) {
-        super(name);
+    public TouhouSword(String name, TouhouCharacter character) {
+        super(name, ModItems.TOUHOU_TOOLS);
         this.character = character;
-        setMaxStackSize(1);
     }
 
     @SideOnly(Side.CLIENT)
@@ -26,4 +26,5 @@ public class TouhouItem extends ItemBase implements IHasTouhouCharacter {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, addTouhouUserTooltip(tooltip, character), flagIn);
     }
+
 }

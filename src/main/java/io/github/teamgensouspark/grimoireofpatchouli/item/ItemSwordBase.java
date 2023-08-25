@@ -11,16 +11,17 @@ import io.github.teamgensouspark.grimoireofpatchouli.creativetabs.GoPTabs;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.vanilia.ModItems;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ItemBase extends Item {
+public class ItemSwordBase extends ItemSword {
     String name, tooltipKey;
 
-    public ItemBase(String name) {
+    public ItemSwordBase(String name, ToolMaterial material) {
+        super(material);
         setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(GoPTabs.GOPTAB);
@@ -47,5 +48,4 @@ public class ItemBase extends Item {
             tooltip.addAll(Arrays.asList(I18n.format(tooltipKey.concat(".more")).split("/n")));
         }
     }
-
 }

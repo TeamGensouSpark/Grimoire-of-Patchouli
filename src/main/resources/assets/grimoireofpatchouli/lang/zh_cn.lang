@@ -18,13 +18,13 @@ spellcard.grimoireofpatchouli.master_spark=恋符「Master Spark」
 item.card_bag.name=符卡袋
 item.shions_bowl.name=紫苑的碗
 item.shining_tripod.name=闪光三脚架
+item.black_sakura.name=樱花「黑樱剑」
 
 gop.tooltip.showmore=/n[ 按住 LSHIFT 更多信息 ]
 gop.tooltip.user=持有者: 
 
 item.card_bag.tooltip=从所有符卡中抽取一张符卡
 item.shions_bowl.tooltip=/n§o这是贫乏神使用过的碗，传说只要接触过这个碗就会变得贫穷。
-item.shions_bowl.tooltip.more=试着对村民使用它!
 
 itemGroup.goptab=帕秋莉的魔法书
 

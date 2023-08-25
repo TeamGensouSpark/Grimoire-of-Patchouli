@@ -19,8 +19,11 @@ public class ModEvents {
             EntityLivingBase living = event.getEntityLiving();
             if (PatchouliModInfo.RND.nextFloat() > 0.95 || !living.isNonBoss()) {
                 World world = living.world;
-                world.spawnEntity(
-                        new EntityItem(world, living.posX, living.posY, living.posZ, new ItemStack(ModItems.CARD_BAG)));
+                if (!world.isRemote) {
+                    world.spawnEntity(
+                            new EntityItem(world, living.posX, living.posY, living.posZ,
+                                    new ItemStack(ModItems.CARD_BAG)));
+                }
             }
         }
     }

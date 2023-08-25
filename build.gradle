@@ -43,7 +43,7 @@ minecraft {
     mcpMappingVersion = '39'
     
     // Set username here, the UUID will be looked up automatically
-    username = 'Patchouli'
+    username = 'Developer'
     
     // Add any additional tweaker classes here
     // extraTweakClasses.add('org.spongepowered.asm.launch.MixinTweaker')
@@ -92,7 +92,7 @@ repositories {
             includeGroup 'curse.maven'
         }
     }
-
+    
     maven {
         name 'Modrinth'
         url "https://api.modrinth.com/maven"
@@ -100,8 +100,8 @@ repositories {
             includeGroup 'maven.modrinth'
         }
     }
-
-    if (project.use_mirror.toBoolean()) {
+    
+    if (project.use_mirror.toBoolean() || project.gradle.startParameter.taskNames[0] == "mirrorSetup") {
         removeIf {
             it instanceof MavenArtifactRepository &&
                 (it.url.toString() == "https://repo.maven.apache.org/maven2/")
@@ -157,11 +157,9 @@ dependencies {
             transitive = false
         }
     }
-
     implementation 'maven.modrinth:kekkai:1.2.0'
-
     implementation fileTree(dir:project.implementation_folder.toString(),includes:['*jar'])
-    if (project.do_embed.toBoolean() && project.gradle.startParameter.taskNames[0] == "build"){
+    if (project.do_embed.toBoolean() && (project.gradle.startParameter.taskNames[0] == "build" || project.gradle.startParameter.taskNames[0] == "publish")){
         embed fileTree(dir:project.embed_folder.toString(),includes:['*jar'])
     }else{
         implementation fileTree(dir:project.embed_folder.toString(),includes:['*jar'])
@@ -197,11 +195,8 @@ processResources {
     }
 }
 
-
-
-
 jar {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
     manifest {
         def attribute_map = [:]
         if (project.use_coremod.toBoolean()) {
@@ -251,6 +246,13 @@ idea {
         }
     }
 }
+
+task mirrorSetup {
+    doLast {
+        println "Enable Mirror build"
+    }
+}
+
 
 tasks.named("processIdeaSettings").configure {
     dependsOn("injectTags")

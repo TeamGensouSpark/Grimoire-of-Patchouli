@@ -1,0 +1,17 @@
+
+[project]
+name = "lunar-cli"
+version = "1.0"
+description = "For LunarCapitalFramework User"
+authors = [
+    {name = "H2Sxxa", email = "H2Sxxa0w0@gmail.com"},
+]
+dependencies = [
+    "Remilia[tui]==1.2.2.1",
+    "requests"
+]
+requires-python = ">=3.8"
+license = {text = "GPL-3.0"}
+
+[tool.setuptools]
+py-modules = ["lunarcli"]
