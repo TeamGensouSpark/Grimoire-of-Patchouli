@@ -17,7 +17,7 @@ public class ModEvents {
     public static void onEntityDead(LivingDeathEvent event) {
         if (!event.isCanceled()) {
             EntityLivingBase living = event.getEntityLiving();
-            if (PatchouliModInfo.RND.nextFloat() > 0.95 || !living.isNonBoss()) {
+            if (PatchouliModInfo.RND.nextFloat() > 0.99 || !living.isNonBoss()) {
                 World world = living.world;
                 if (!world.isRemote) {
                     world.spawnEntity(

@@ -24,7 +24,7 @@ gop.tooltip.showmore=/n[ 按住 LSHIFT 更多信息 ]
 gop.tooltip.user=持有者: 
 
 item.card_bag.tooltip=从所有符卡中抽取一张符卡
-item.shions_bowl.tooltip=/n§o这是贫乏神使用过的碗，传说只要接触过这个碗就会变得贫穷。
-
+item.shions_bowl.tooltip=/n这是贫乏神使用过的碗，传说只要接触过这个碗就会变得贫穷。
+item.black_sakura.tooltip=/n将楼观剑与白楼剑反复锻造融为一体，并获得西行妖妖力的妖刀。/n据说能一刀斩断万物。
 itemGroup.goptab=帕秋莉的魔法书
 
