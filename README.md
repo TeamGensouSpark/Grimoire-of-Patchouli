@@ -1,13 +1,21 @@
-## Noitce
+<div align=center>
+  <img width=200 src="./doc/GOPx800.png"  alt="image"/>
+  <h1 align="center">Grimoire of Patchouli</h1> 
+</div>
 
-Not Ready to use
+## About
 
-## What's this?
+**Warning: GoP Requires [Kekkai](https://modrinth.com/mod/kekkai)**
 
-A modify MDK,aim to provide all the sweets to the developer
+### What is this?
+
+
+A Touhou+ mod, brings some spellcards and Touhou Item to Minecraft.
 
 ## Credits
 
-https://github.com/CleanroomMC/TemplateDevEnv
-
-https://github.com/IdeallandEarthDept/IdeallandFramework
+- [DanmakuCore](https://github.com/TeamNightclipse/DanmakuCore)
+- [Mirror](https://github.com/TeamNightclipse/Mirror)
+- [Kekkai](https://github.com/TeamGensouSpark/Kekkai)
+- [Grimoire Of Alice](https://github.com/TeamNightclipse/Grimoire-Of-Alice)
+- [LunarCapitalFramework](https://github.com/TeamGensouSpark/LunarCapitalFramework)
