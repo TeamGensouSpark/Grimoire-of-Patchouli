@@ -9,7 +9,6 @@
 
 ### What is this?
 
-
 A Touhou+ mod, brings some spellcards and Touhou Item to Minecraft.
 
 ## Credits
