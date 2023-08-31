@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-      "layer0": "grimoireofpatchouli:items/vanilia/shining_tripod"
+        "layer0": "grimoireofpatchouli:items/vanilia/shining_tripod"
     }
-  }
+}

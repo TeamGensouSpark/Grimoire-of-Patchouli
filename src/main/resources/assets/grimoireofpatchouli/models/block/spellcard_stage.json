@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "grimoireofpatchouli:blocks/spellcard_stage_side",
+        "down": "grimoireofpatchouli:blocks/spellcard_stage_down",
+        "up": "grimoireofpatchouli:blocks/spellcard_stage_up",
+        "north": "grimoireofpatchouli:blocks/spellcard_stage_side",
+        "south": "grimoireofpatchouli:blocks/spellcard_stage_side",
+        "west": "grimoireofpatchouli:blocks/spellcard_stage_side",
+        "east": "grimoireofpatchouli:blocks/spellcard_stage_side"
+    }
+}

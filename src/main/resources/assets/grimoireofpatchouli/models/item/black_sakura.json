@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-      "layer0": "grimoireofpatchouli:items/vanilia/black_sakura"
+        "layer0": "grimoireofpatchouli:items/vanilia/black_sakura"
     }
-  }
+}

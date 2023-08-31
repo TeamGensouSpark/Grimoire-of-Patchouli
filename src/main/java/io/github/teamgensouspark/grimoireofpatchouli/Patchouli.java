@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = PatchouliModInfo.MODID, name = PatchouliModInfo.NAME, version = PatchouliModInfo.VERSION, dependencies = "required-after:mirror@[0.4.0,);required-after:danmakucore;required-after:kekkai")
 public class Patchouli {
     public static Logger logger;
-    public static ModResource patchouli_res = new ModResource(PatchouliModInfo.MODID);
+    public static ModResource resource = new ModResource(PatchouliModInfo.MODID);
     @SidedProxy(clientSide = "io.github.teamgensouspark.grimoireofpatchouli.proxy.ClientProxy", serverSide = "io.github.teamgensouspark.grimoireofpatchouli.proxy.CommonProxy")
     public static CommonProxy proxy;
 
