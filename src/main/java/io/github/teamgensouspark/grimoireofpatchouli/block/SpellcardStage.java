@@ -9,6 +9,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
 import io.github.teamgensouspark.kekkai.utils.ScalaJ;
 import net.katsstuff.teamnightclipse.danmakucore.item.ItemSpellcard;
 import net.katsstuff.teamnightclipse.danmakucore.scalastuff.TouhouHelper;
@@ -29,7 +30,8 @@ public class SpellcardStage extends BlockBase {
             }
             if (!playerIn.world.isRemote) {
                 EntityArmorStand tmp = new EntityArmorStand(worldIn);
-                //tmp.setLife(ItemSpellcard.getSpellcard(itemheld).endTime() + 5);
+                tmp.getEntityData().setInteger("_lifespan", ItemSpellcard.getSpellcard(itemheld).endTime());
+                tmp.setInvisible(true);
                 tmp.setPosition(pos.getX(), pos.getY() + 1, pos.getZ());
                 worldIn.spawnEntity(tmp);
                 TouhouHelper.declareSpellcard(tmp, ScalaJ.option(playerIn), ItemSpellcard.getSpellcard(itemheld),

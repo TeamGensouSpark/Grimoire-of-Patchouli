@@ -15,6 +15,11 @@ spellcard.grimoireofpatchouli.milky_way=魔符「Milky Way」
 item.spellcard.spellcard.grimoireofpatchouli.master_spark.name=符卡:恋符「Master Spark」
 spellcard.grimoireofpatchouli.master_spark=恋符「Master Spark」
 
+item.spellcard.spellcard.grimoireofpatchouli.wave_particle.name=符卡:境符「波与粒的境界」
+spellcard.grimoireofpatchouli.wave_particle=境符「波与粒的境界」
+
+itemGroup.goptab=帕秋莉的魔法书
+
 item.card_bag.name=符卡袋
 item.shions_bowl.name=紫苑的碗
 item.shining_tripod.name=闪光三脚架
@@ -26,5 +31,7 @@ gop.tooltip.user=持有者:
 item.card_bag.tooltip=从所有符卡中抽取一张符卡
 item.shions_bowl.tooltip=/n这是贫乏神使用过的碗，传说只要接触过这个碗就会变得贫穷。
 item.black_sakura.tooltip=/n将楼观剑与白楼剑反复锻造融为一体，并获得西行妖妖力的妖刀。/n据说能一刀斩断万物。
-itemGroup.goptab=帕秋莉的魔法书
+item.shining_tripod.tooltip=/n没有相机的三脚架，拥有不俗的亮度
 
+tile.spellcard_stage.name=符卡台
+block.spellcard_stage.tooltip=放置后可以使用符卡SHIFT+右键来进行符卡宣言，同时，手中的符卡会被消耗

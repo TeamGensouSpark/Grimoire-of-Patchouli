@@ -6,7 +6,6 @@ import java.util.List;
 import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.GoPSubEntityType;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.DreamSealSubEntity;
-import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.IDReleaseSubEntity;
 import io.github.teamgensouspark.grimoireofpatchouli.danmaku.subentity.MasterSparkSubEntity;
 import net.katsstuff.teamnightclipse.danmakucore.danmaku.subentity.SubEntityType;
 import net.minecraftforge.event.RegistryEvent;
@@ -20,8 +19,6 @@ public class ModSubEntity {
 
         public static final List<SubEntityType> DANMAKU_SUBENTITYTYPE = new ArrayList<>();
 
-        public static final SubEntityType IDRELEASE_SUBENTITYTYPE = new GoPSubEntityType<IDReleaseSubEntity>(
-                        "idrelease_subentity", IDReleaseSubEntity.class);
         public static final SubEntityType DREAM_SEAL_SUBENTITYTYPE = new GoPSubEntityType<DreamSealSubEntity>(
                         "dreamseal_subentity", DreamSealSubEntity.class);
         public static final SubEntityType MASTER_SPARK_SUBENTITYTYPE = new GoPSubEntityType<MasterSparkSubEntity>(

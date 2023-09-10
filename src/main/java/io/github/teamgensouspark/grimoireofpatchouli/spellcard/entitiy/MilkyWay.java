@@ -1,6 +1,5 @@
 package io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy;
 
-import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModSubEntity;
 import io.github.teamgensouspark.kekkai.color.AtomColors;
 import io.github.teamgensouspark.kekkai.danmaku.DanmakuBuilder;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.EntitySpellcard;
@@ -22,11 +21,10 @@ public class MilkyWay extends SpellcardEntity {
         if (time() % 8 == 0) {
             DanmakuCreationHelper.createCircleShot(
                     DanmakuBuilder.getBuilderWithEntity(user())
-                            .setShot(LibShotData.SHOT_STAR.setMainColor(AtomColors.ATOM_COLOR_RED)
-                                    .setSubEntity(ModSubEntity.IDRELEASE_SUBENTITYTYPE))
+                            .setShot(LibShotData.SHOT_STAR.setMainColor(AtomColors.ATOM_COLOR_RED))
                             .build(),
                     11,
-                    0f,
+                    time() % 20,
                     1d);
         }
         if (time() % 6 == 0) {
@@ -36,17 +34,16 @@ public class MilkyWay extends SpellcardEntity {
                                     .scaleSize(0.3f))
                             .build(),
                     8,
-                    0f,
+                    time() % 10,
                     1d);
         }
         if (time() % 12 == 0) {
             DanmakuCreationHelper.createCircleShot(
                     DanmakuBuilder.getBuilderWithEntity(user())
-                            .setShot(LibShotData.SHOT_STAR.setMainColor(AtomColors.ATOM_COLOR_CYAN)
-                                    .setSubEntity(ModSubEntity.IDRELEASE_SUBENTITYTYPE))
+                            .setShot(LibShotData.SHOT_STAR.setMainColor(AtomColors.ATOM_COLOR_CYAN))
                             .build(),
                     11,
-                    0f,
+                    time() % 20,
                     1d);
         }
     }
