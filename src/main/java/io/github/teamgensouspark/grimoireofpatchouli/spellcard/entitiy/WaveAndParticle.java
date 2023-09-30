@@ -18,12 +18,15 @@ public class WaveAndParticle extends SpellcardEntity {
 
     @Override
     public void onSpellcardUpdate() {
-        KekkaiDanmakuCreationHelper.createCircleShot(
-                DanmakuBuilder.getBuilderWithEntity(user())
-                        .setShot(LibShotData.SHOT_RICE.setMainColor(AtomColors.ATOM_COLOR_PURPLE)).build(),
-                9, (float) (Math.PI / 180 *
-                        time() * ((float) time() / 5)),
-                0d);
+        // love from gsko
+        if (time() % 2 == 0) {
+            KekkaiDanmakuCreationHelper.createCircleShot(
+                    DanmakuBuilder.getBuilderWithEntity(user())
+                            .setShot(LibShotData.SHOT_RICE.setMainColor(AtomColors.ATOM_COLOR_PURPLE)).build(),
+                    9, 5 * (float) (Math.PI / 180 *
+                            time() * ((float) time() / 5)),
+                    0d);
+        }
     }
 
 }

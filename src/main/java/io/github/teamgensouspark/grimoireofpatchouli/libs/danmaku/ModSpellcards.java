@@ -7,11 +7,13 @@ import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.GoPSpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.compat.GoASpellcardBase;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.DreamSeal;
+import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.EarthLight;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.IDRelease;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.MasterSpark;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.MilkyWay;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.PearlDarkCast;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.WaveAndParticle;
+import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.WonderGodWind;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.minecraftforge.event.RegistryEvent;
@@ -45,6 +47,11 @@ public class ModSpellcards {
             TouhouCharacter.MARISA_KIRISAME).setendTime(200);
     public static final Spellcard WAVE_PARTICLE = new GoASpellcardBase<WaveAndParticle>("wave_particle",
             WaveAndParticle.class, TouhouCharacter.YUKARI_YAKUMO).setendTime(400);
+
+    public static final Spellcard WONDER_GODWIND = new GoASpellcardBase<WonderGodWind>("wonder_godwind",
+            WonderGodWind.class, TouhouCharacter.SANAE_KOCHIYA).setendTime(200);
+    public static final Spellcard EARTH_LIGHT = new GoASpellcardBase<EarthLight>("earth_light",
+            EarthLight.class, TouhouCharacter.MARISA_KIRISAME).setendTime(200);
 
     @SubscribeEvent
     public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {

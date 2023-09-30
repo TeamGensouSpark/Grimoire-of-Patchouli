@@ -18,6 +18,9 @@ spellcard.grimoireofpatchouli.master_spark=恋符「Master Spark」
 item.spellcard.spellcard.grimoireofpatchouli.wave_particle.name=符卡:境符「波与粒的境界」
 spellcard.grimoireofpatchouli.wave_particle=境符「波与粒的境界」
 
+item.spellcard.spellcard.grimoireofpatchouli.earth_light.name=符卡:光符「Earth Light Ray」
+spellcard.grimoireofpatchouli.earth_light=光符「Earth Light Ray」
+
 itemGroup.goptab=帕秋莉的魔法书
 
 item.card_bag.name=符卡袋
