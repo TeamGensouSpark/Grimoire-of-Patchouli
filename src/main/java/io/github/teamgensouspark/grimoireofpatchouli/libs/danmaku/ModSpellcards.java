@@ -28,11 +28,11 @@ public class ModSpellcards {
 
     public static final List<Spellcard> SPELL_CARDS = new ArrayList<>();
     public static final List<Spellcard> GOA_SPELL_CARDS = new ArrayList<>();
-
+    // GoA compat
     public static final Spellcard PEARL_DARK_CAST = new GoASpellcardBase<PearlDarkCast>("pearl_dark_cast",
             PearlDarkCast.class,
             TouhouCharacter.REIMU_HAKUREI).setendTime(80);
-
+    // Native Spellcard
     public static final Spellcard ID_RELEASE = new GoPSpellcardBase<IDRelease>("id_release",
             IDRelease.class,
             TouhouCharacter.KOISHI_KOMEIJI).setendTime(180);
@@ -45,12 +45,12 @@ public class ModSpellcards {
 
     public static final Spellcard MASTER_SPARK = new GoPSpellcardBase<MasterSpark>("master_spark", MasterSpark.class,
             TouhouCharacter.MARISA_KIRISAME).setendTime(200);
-    public static final Spellcard WAVE_PARTICLE = new GoASpellcardBase<WaveAndParticle>("wave_particle",
+    public static final Spellcard WAVE_PARTICLE = new GoPSpellcardBase<WaveAndParticle>("wave_particle",
             WaveAndParticle.class, TouhouCharacter.YUKARI_YAKUMO).setendTime(400);
 
-    public static final Spellcard WONDER_GODWIND = new GoASpellcardBase<WonderGodWind>("wonder_godwind",
+    public static final Spellcard WONDER_GODWIND = new GoPSpellcardBase<WonderGodWind>("wonder_godwind",
             WonderGodWind.class, TouhouCharacter.SANAE_KOCHIYA).setendTime(200);
-    public static final Spellcard EARTH_LIGHT = new GoASpellcardBase<EarthLight>("earth_light",
+    public static final Spellcard EARTH_LIGHT = new GoPSpellcardBase<EarthLight>("earth_light",
             EarthLight.class, TouhouCharacter.MARISA_KIRISAME).setendTime(200);
 
     @SubscribeEvent
