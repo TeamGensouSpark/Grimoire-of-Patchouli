@@ -21,12 +21,26 @@ spellcard.grimoireofpatchouli.wave_particle=境符「波与粒的境界」
 item.spellcard.spellcard.grimoireofpatchouli.earth_light.name=符卡:光符「Earth Light Ray」
 spellcard.grimoireofpatchouli.earth_light=光符「Earth Light Ray」
 
+item.spellcard.spellcard.grimoireofpatchouli.wonder_godwind.name=符卡:大奇迹「八坂之神风」
+spellcard.grimoireofpatchouli.wonder_godwind=大奇迹「八坂之神风」
+
 itemGroup.goptab=帕秋莉的魔法书
 
 item.card_bag.name=符卡袋
+item.moon_phaser.name=月相仪
 item.shions_bowl.name=紫苑的碗
 item.shining_tripod.name=闪光三脚架
 item.black_sakura.name=樱花「黑樱剑」
+
+
+moonphase.FULL_MOON.name=满月
+moonphase.WANING_GIBBOUS.name=亏凸月
+moonphase.LAST_QUARTER.name=下弦月
+moonphase.WANING_CRESCENT.name=残月
+moonphase.NEW_MOON.name=新月
+moonphase.WAXING_CRESCEN.name=峨眉月
+moonphase.FIRST_QUARTER.name=上弦月
+moonphase.WAXING_GIBBOUS.name=盈凸月
 
 gop.tooltip.showmore=/n[ 按住 LSHIFT 更多信息 ]
 gop.tooltip.user=持有者: 

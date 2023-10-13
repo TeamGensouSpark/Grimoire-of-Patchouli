@@ -30,6 +30,16 @@ public class ItemBase extends Item {
         ModItems.ITEMS.add(this);
     }
 
+    public ItemBase(String name, boolean isGoA) {
+        setTranslationKey(name);
+        setRegistryName(name);
+        setCreativeTab(GoPTabs.GOPTAB);
+
+        this.name = name;
+        this.tooltipKey = String.format("item.%s.tooltip", name);
+        ModItems.GOA_ITEMS.add(this);
+    }
+
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
