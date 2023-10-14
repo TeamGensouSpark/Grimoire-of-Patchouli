@@ -9,6 +9,7 @@ import org.lwjgl.input.Keyboard;
 
 import io.github.teamgensouspark.grimoireofpatchouli.creativetabs.GoPTabs;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.vanilia.ModItems;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.ModCompat;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
@@ -29,6 +30,19 @@ public class ItemSwordBase extends ItemSword {
         this.name = name;
         this.tooltipKey = String.format("item.%s.tooltip", name);
         ModItems.ITEMS.add(this);
+    }
+
+    public ItemSwordBase(String name, ToolMaterial material, ModCompat compat) {
+        super(material);
+        setTranslationKey(name);
+        setRegistryName(name);
+        setCreativeTab(GoPTabs.GOPTAB);
+
+        this.name = name;
+        this.tooltipKey = String.format("item.%s.tooltip", name);
+        if (compat == ModCompat.GOA) {
+            ModItems.GOA_ITEMS.add(this);
+        }
     }
 
     @SideOnly(Side.CLIENT)

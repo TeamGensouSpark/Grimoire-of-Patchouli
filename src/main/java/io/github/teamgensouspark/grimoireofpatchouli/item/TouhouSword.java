@@ -4,8 +4,9 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import io.github.teamgensouspark.grimoireofpatchouli.intf.IHasTouhouCharacter;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.vanilia.ModItems;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.IHasTouhouCharacter;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.ModCompat;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
@@ -18,6 +19,11 @@ public class TouhouSword extends ItemSwordBase implements IHasTouhouCharacter {
 
     public TouhouSword(String name, TouhouCharacter character) {
         super(name, ModItems.TOUHOU_TOOLS);
+        this.character = character;
+    }
+
+    public TouhouSword(String name, TouhouCharacter character, ModCompat compat) {
+        super(name, ModItems.TOUHOU_TOOLS,compat);
         this.character = character;
     }
 

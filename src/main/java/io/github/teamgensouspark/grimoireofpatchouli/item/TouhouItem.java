@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import io.github.teamgensouspark.grimoireofpatchouli.intf.IHasTouhouCharacter;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.IHasTouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;

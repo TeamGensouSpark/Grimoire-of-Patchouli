@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "grimoireofpatchouli:item",
+    "result": {
+        "item": "grimoireofpatchouli:moon_phaser",
+        "count": 1
+    },
+    "ingredients": [
+        {
+            "item": "minecraft:dye",
+            "data": 4
+        },
+        {
+            "item": "minecraft:redstone"
+        },
+        {
+            "item": "minecraft:redstone"
+        },
+        {
+            "item": "minecraft:clock"
+        }
+    ]
+}

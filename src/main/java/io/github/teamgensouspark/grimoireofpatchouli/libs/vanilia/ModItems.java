@@ -7,13 +7,13 @@ import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import io.github.teamgensouspark.grimoireofpatchouli.Patchouli;
 import io.github.teamgensouspark.grimoireofpatchouli.item.*;
 import io.github.teamgensouspark.grimoireofpatchouli.item.touhou.*;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.ModCompat;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -33,16 +33,12 @@ public class ModItems {
     @SubscribeEvent
     public static void onItemModelReg(ModelRegistryEvent event) {
         ITEMS.forEach(item -> Patchouli.proxy.regCommonVaniliaIRR(item));
-        if (Loader.isModLoaded("grimoireofalice")) {
-            GOA_ITEMS.forEach(item -> Patchouli.proxy.regCommonVaniliaIRR(item));
-        }
+        ModCompat.GOA.loadedThen(() -> GOA_ITEMS.forEach(item -> Patchouli.proxy.regCommonVaniliaIRR(item)));
     }
 
     @SubscribeEvent
     public static void onItemReg(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(ITEMS.toArray(new Item[0]));
-        if (Loader.isModLoaded("grimoireofalice")) {
-            event.getRegistry().registerAll(GOA_ITEMS.toArray(new Item[0]));
-        }
+        ModCompat.GOA.loadedThen(() -> event.getRegistry().registerAll(GOA_ITEMS.toArray(new Item[0])));
     }
 }

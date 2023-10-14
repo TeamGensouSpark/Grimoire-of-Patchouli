@@ -14,10 +14,10 @@ import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.MilkyWay;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.PearlDarkCast;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.WaveAndParticle;
 import io.github.teamgensouspark.grimoireofpatchouli.spellcard.entitiy.WonderGodWind;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.ModCompat;
 import net.katsstuff.teamnightclipse.danmakucore.entity.living.TouhouCharacter;
 import net.katsstuff.teamnightclipse.danmakucore.entity.spellcard.Spellcard;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -56,8 +56,6 @@ public class ModSpellcards {
     @SubscribeEvent
     public static void onSpellCardRegister(RegistryEvent.Register<Spellcard> event) {
         event.getRegistry().registerAll(SPELL_CARDS.toArray(new Spellcard[0]));
-        if (Loader.isModLoaded("grimoireofalice")) {
-            event.getRegistry().registerAll(GOA_SPELL_CARDS.toArray(new Spellcard[0]));
-        }
+        ModCompat.GOA.loadedThen(() -> event.getRegistry().registerAll(GOA_SPELL_CARDS.toArray(new Spellcard[0])));
     }
 }

@@ -1,4 +1,4 @@
-package io.github.teamgensouspark.grimoireofpatchouli.intf;
+package io.github.teamgensouspark.grimoireofpatchouli.utils;
 
 import java.util.List;
 

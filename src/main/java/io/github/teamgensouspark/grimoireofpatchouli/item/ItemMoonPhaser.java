@@ -1,6 +1,7 @@
 package io.github.teamgensouspark.grimoireofpatchouli.item;
 
 import arekkuusu.grimoireofalice.api.recipes.MoonPhase;
+import io.github.teamgensouspark.grimoireofpatchouli.utils.ModCompat;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -12,7 +13,9 @@ import net.minecraft.world.World;
 public class ItemMoonPhaser extends ItemBase {
 
     public ItemMoonPhaser(String name) {
-        super(name, true);
+        super(name, ModCompat.GOA);
+
+        setMaxStackSize(1);
     }
 
     @Override
