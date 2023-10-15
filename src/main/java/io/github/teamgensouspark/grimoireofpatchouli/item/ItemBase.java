@@ -59,6 +59,9 @@ public class ItemBase extends Item {
             tooltip.clear();
             tooltip.addAll(Arrays.asList(I18n.format(tooltipKey.concat(".more")).split("/n")));
         }
+        if (!stack.getEnchantmentTagList().isEmpty()){
+            tooltip.add("");
+        }
     }
 
 }
