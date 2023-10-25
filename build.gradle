@@ -157,7 +157,7 @@ dependencies {
             transitive = false
         }
     }
-    implementation 'maven.modrinth:kekkai:1.2.1'
+    implementation 'maven.modrinth:kekkai:1.2.2'
     implementation fileTree(dir:project.implementation_folder.toString(),includes:['*jar'])
     if (project.do_embed.toBoolean() && (project.gradle.startParameter.taskNames[0] == "build" || project.gradle.startParameter.taskNames[0] == "publish")){
         embed fileTree(dir:project.embed_folder.toString(),includes:['*jar'])

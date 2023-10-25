@@ -17,6 +17,10 @@ public class Cardbag extends ItemBase {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         playerIn.addItemStackToInventory(ItemSpellcard
                 .createStack(KekkaiRegistry.getRandomObject(Spellcard.class)));
+        if (!playerIn.isCreative()) {
+            playerIn.getHeldItem(handIn).shrink(1);
+        }
+
         return super.onItemRightClick(worldIn, playerIn, handIn);
     }
 
