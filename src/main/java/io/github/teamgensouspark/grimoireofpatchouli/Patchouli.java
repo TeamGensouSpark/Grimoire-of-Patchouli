@@ -6,6 +6,7 @@ import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModForms;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModSpellcards;
 import io.github.teamgensouspark.grimoireofpatchouli.libs.danmaku.ModSubEntity;
 import io.github.teamgensouspark.grimoireofpatchouli.proxy.CommonProxy;
+import io.github.teamgensouspark.grimoireofpatchouli.recepies.ModAnvilReceipes;
 import io.github.teamgensouspark.kekkai.utils.ModResource;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -25,5 +26,6 @@ public class Patchouli {
         ModForms.initForms();
         ModSubEntity.initSubEntity();
         ModSpellcards.initSpellCard();
+        ModAnvilReceipes.init();
     }
 }
