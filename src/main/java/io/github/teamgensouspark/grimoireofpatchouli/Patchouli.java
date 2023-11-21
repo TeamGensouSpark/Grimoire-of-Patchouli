@@ -11,6 +11,7 @@ import io.github.teamgensouspark.kekkai.utils.ModResource;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = PatchouliModInfo.MODID, name = PatchouliModInfo.NAME, version = PatchouliModInfo.VERSION, dependencies = "required-after:mirror@[0.4.0,);required-after:danmakucore;required-after:kekkai")
@@ -26,6 +27,10 @@ public class Patchouli {
         ModForms.initForms();
         ModSubEntity.initSubEntity();
         ModSpellcards.initSpellCard();
+    }
+
+    @EventHandler
+    public static void postInit(FMLPostInitializationEvent event){
         ModAnvilReceipes.init();
     }
 }

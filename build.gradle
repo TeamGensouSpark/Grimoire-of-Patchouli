@@ -81,6 +81,7 @@ repositories {
         name 'CleanroomMC Maven'
         url 'https://maven.cleanroommc.com'
     }
+
     maven {
         name 'SpongePowered Maven'
         url 'https://repo.spongepowered.org/maven'
@@ -118,6 +119,20 @@ repositories {
         }
         //more mirror maven add here,in order to search plugins
     }
+
+    if (project.use_jei.toBoolean()){
+        maven {
+            // location of the maven that hosts JEI files
+            name 'Progwml6 maven'
+            url 'https://dvs1.progwml6.com/files/maven/'
+        }
+        maven {
+            // location of a maven mirror for JEI files, as a fallback
+            name 'ModMaven'
+            url 'https://modmaven.dev'
+        }
+    }
+
     maven {
         // RetroFuturaGradle
         name 'GTNH Maven'
@@ -157,6 +172,14 @@ dependencies {
             transitive = false
         }
     }
+
+
+    if (project.use_jei.toBoolean()){
+        compileOnly "mezz.jei:jei_1.12.2:${jei_version}"
+        runtimeOnly "mezz.jei:jei_1.12.2:${jei_version}"
+    }
+
+
     implementation 'maven.modrinth:kekkai:1.2.2'
     implementation fileTree(dir:project.implementation_folder.toString(),includes:['*jar'])
     if (project.do_embed.toBoolean() && (project.gradle.startParameter.taskNames[0] == "build" || project.gradle.startParameter.taskNames[0] == "publish")){

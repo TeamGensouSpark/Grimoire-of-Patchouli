@@ -2,6 +2,7 @@ package io.github.teamgensouspark.grimoireofpatchouli.api.anvil;
 
 import java.util.HashMap;
 
+import io.github.teamgensouspark.grimoireofpatchouli.Patchouli;
 import io.github.teamgensouspark.grimoireofpatchouli.PatchouliModInfo;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.AnvilUpdateEvent;
@@ -12,8 +13,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class AnvilApi {
     private static HashMap<String, AnvilReceipe> RECEPIES = new HashMap<>();
 
+    public static HashMap<String, AnvilReceipe> getReceipes() {
+        return RECEPIES;
+    }
+
     public static void regReceipe(String name, AnvilReceipe receipe) {
         AnvilApi.RECEPIES.put(name, receipe);
+        Patchouli.logger.info(String.format("register %s", name));
     }
 
     public static void unregReceipe(String name) {

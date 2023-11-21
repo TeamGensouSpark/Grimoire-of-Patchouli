@@ -1,5 +1,7 @@
 package io.github.teamgensouspark.grimoireofpatchouli.api.anvil;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Predicate;
 
 import net.minecraft.item.ItemStack;
@@ -11,6 +13,9 @@ public class AnvilReceipe {
     public ItemStack result = ItemStack.EMPTY;
     public Predicate<ItemStack> left;
     public Predicate<ItemStack> right;
+    public ItemStack display_left;
+    public List<ItemStack> display_right;
+    public boolean isDisplay = false;
 
     public AnvilReceipe(Predicate<ItemStack> left, Predicate<ItemStack> right) {
         this.left = left;
@@ -56,6 +61,20 @@ public class AnvilReceipe {
             return true;
         }
         return false;
+    }
+
+    public AnvilReceipe setDisplay(ItemStack left, List<ItemStack> right) {
+        isDisplay = true;
+        display_left = left;
+        display_right = right;
+        return this;
+    }
+
+    public AnvilReceipe setDisplay(ItemStack left, ItemStack right) {
+        isDisplay = true;
+        display_left = left;
+        display_right = Collections.singletonList(right);
+        return this;
     }
 
     public void apply(AnvilUpdateEvent event) {
